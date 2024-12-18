@@ -8,12 +8,11 @@ pluginManagement {
         maven("https://maven.neoforged.net/releases/")
         maven("https://maven.minecraftforge.net/")
         maven("https://maven.kikugie.dev/releases")
-        maven("https://maven.kikugie.dev/snapshots")
     }
 }
 
 plugins {
-    id("dev.kikugie.stonecutter") version "0.5-beta.5"
+    id("dev.kikugie.stonecutter") version "0.5"
 }
 
 stonecutter {

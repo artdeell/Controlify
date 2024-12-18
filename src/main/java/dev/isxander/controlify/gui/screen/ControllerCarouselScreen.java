@@ -11,6 +11,7 @@ import dev.isxander.controlify.controller.GenericControllerConfig;
 import dev.isxander.controlify.controller.steamdeck.SteamDeckComponent;
 import dev.isxander.controlify.controllermanager.ControllerManager;
 import dev.isxander.controlify.gui.components.FakePositionPlainTextButton;
+import dev.isxander.controlify.mixins.feature.ui.AbstractSelectionListAccessor;
 import dev.isxander.controlify.screenop.ScreenControllerEventListener;
 import dev.isxander.controlify.utils.render.Blit;
 import dev.isxander.controlify.utils.CUtil;
@@ -24,7 +25,6 @@ import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ComponentPath;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.components.AbstractSelectionList;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Renderable;
 import net.minecraft.client.gui.components.Tooltip;
@@ -216,7 +216,7 @@ public class ControllerCarouselScreen extends Screen implements ScreenController
         RenderSystem.enableBlend();
         Blit.blitTex(
                 graphics,
-                minecraft.level == null ? AbstractSelectionList.MENU_LIST_BACKGROUND : AbstractSelectionList.INWORLD_MENU_LIST_BACKGROUND,
+                minecraft.level == null ? AbstractSelectionListAccessor.getMenuListBackground() : AbstractSelectionListAccessor.getInWorldMenuListBackground(),
                 0, 0,
                 0f, 0f,
                 width, footerY,

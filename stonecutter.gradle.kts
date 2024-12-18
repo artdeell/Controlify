@@ -63,7 +63,6 @@ subprojects {
             forRepository { maven("https://cursemaven.com") }
             filter { includeGroup("curse.maven") }
         }
-        maven("https://jitpack.io")
         maven("https://maven.neoforged.net/releases/")
     }
 }
