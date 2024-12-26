@@ -96,6 +96,8 @@ public class SDL3NativesManager {
             SdlNativeLibraryLoader.loadLibSDL3FromFilePathNow("SDL3");
         } catch (UnsatisfiedLinkError e) {
             return false;
+        } catch (Throwable e) {
+            CUtil.LOGGER.error("Failed to load SDL3", e);
         }
 
         initFuture = new CompletableFuture<>();
